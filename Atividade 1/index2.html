@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Produtos</title>
+</head>
+<body>
+
+    <header>
+        <h1>Catálogo de Produtos</h1>
+        <p>Bem vindo a loja! Confira abaixo a seleção de produtos</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Produtos</h2>
+            <ul>
+                <li>
+                    <article>
+                        <img src="assets/shoes_image.png" alt="Fotografia do Sapato casual">
+                        <h3>Sapato casual</h3>
+                        <p>R$ 120,50</p>
+                        <a href="/produtos/produto-1">Ver detalhes</a>
+                    </article>
+                </li>
+                
+                <li>
+                    <article>
+                        <img src="assets/pants_image.png" alt="Fotografia da Calça preta">
+                        <h3>Calça preta</h3>
+                        <p>R$ 89,90</p>
+                        <a href="/produtos/produto-2">Ver detalhes</a>
+                    </article>
+                </li>
+                
+                <li>
+                    <article>
+                        <img src="assets/sweatshirt_image.png" alt="Fotografia do Moletom estiloso">
+                        <h3>Moletom estiloso</h3>
+                        <p>R$ 250,00</p>
+                        <a href="/produtos/produto-3">Ver detalhes</a>
+                    </article>
+                </li>
+            </ul>
+        </section>
+
+        <section >
+            <h2 id="titulo-cadastro">Cadastrar Novo Produto</h2>
+            
+            <form action="/api/produtos" method="POST">
+                <div>
+                    <label for="nome">Nome do Produto:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+
+                <div>
+                    <label for="preco">Preço (R$):</label>
+                    <input type="number" id="preco" name="preco">
+                </div>
+
+                <div>
+                    <label for="foto">URL da Foto:</label>
+                    <input type="url" id="foto" name="foto">
+                </div>
+
+                <div>
+                    <label for="link_detalhes">Link para Detalhes:</label>
+                    <input type="url" id="link_detalhes" name="link_detalhes">
+                </div>
+
+                <button type="submit">Cadastrar Novo Produto</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
