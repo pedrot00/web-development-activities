@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="<%= idioma %>">
+<head>
+    <meta charset="UTF-8">
+    <title>Saudação</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <main>
+        <h1><%= mensagem %></h1>
+        <p>👋🏻</p>
+    </main>
+</body>
+</html>

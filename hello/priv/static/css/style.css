@@ -1,0 +1,23 @@
+body {
+    background-color: #eeeeF4;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+main {
+    background-color: #a5a7b4;
+    padding: 40px 60px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px #0003;
+    text-align: center;
+    color: #17172c;
+}
+h1 {
+    font-size: 28px;
+}
+p {
+    font-size: 30px;
+}
