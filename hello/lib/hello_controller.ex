@@ -1,22 +1,17 @@
 
 defmodule HelloWeb.HelloController do
   use Phoenix.Controller, formats: [:html]
+  require EEx
+
+  EEx.function_from_file(:def, :template, "lib/saudacao.html.eex", [:idioma, :mensagem])
 
   def saudacao(conn, %{"lang" => "pt", "name" => name}) do
-    conteudo = EEx.eval_file("lib/saudacao.html.eex",
-      idioma: "pt",
-      mensagem: "Olá, #{name}!"
-    )
-
+    conteudo = template("pt", "Olá, #{name}!")
     html(conn, conteudo)
   end
 
   def saudacao(conn, %{"lang" => "en", "name" => name}) do
-    conteudo = EEx.eval_file("lib/saudacao.html.eex",
-      idioma: "en",
-      mensagem: "Hello, #{name}!"
-    )
-
+    conteudo = template("en", "Hello, #{name}!")
     html(conn, conteudo)
   end
 end
