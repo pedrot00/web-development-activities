@@ -1,6 +1,3 @@
-import pypandoc
-
-content = """# Como testar
 
 Para testar a aplicação, acesse o link:
 
